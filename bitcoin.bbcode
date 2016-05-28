@@ -1,0 +1,70 @@
+Since announcing [url=https://blog.roleplaygateway.com/posts/our-greatest-quest-yet]our quest to re-invent RolePlayGateway using Maki[/url], we've made some incredible progress.  [url=https://chat.maki.io]The Maki Developer Community[/url]'s membership is up to 180 people, with several dozen projects now being created as a part of the group.  We've also [url=https://twitter.com/RolePlayGateway/status/726521645196664833]announced Project Quill[/url], the official name for our new platform.
+
+One of the topics that comes up most frequently is our continuous stream of references to Bitcoin.  Bitcoin is an essential part of the future, both for us and the world economy at large.  To understand what happens next, we'll need to understand a bit more about what, exactly, Bitcoin is.  Then we'll build a narrative around how it relates to us.
+
+This content is released under [url=http://choosealicense.com/licenses/cc-by-sa-4.0/]the CC-BY-4.0 License[/url], and is [url=https://github.com/martindale/tutorials/blob/master/bitcoin.bbcode]available on GitHub in its original format[/url].  I hope others will contribute edits and improvements to both this guide and [url=https://github.com/martindale/tutorials]the whole collection of tutorials[/url], to improve them for future readers.
+
+[size=80][b]Editor's Note:[/b] this is a [b]first draft[/b].  Please denote it as such.[/size]
+
+[hr][/hr]
+[size=200][b]What is Bitcoin?[/b][/size]
+
+[size=120][b]Bitcoin[/b] establishes a new protocol for trade & commerce, replacing the need for trust in people with a trust in [b]mathematics[/b].[/size]
+
+The general goal of Bitcoin is to connect people financially, eliminating any middlemen from their commercial transactions.  Bitcoin is a public network that gives anyone with Internet access the ability to participate in truly free trade.  This process is known as [b]disintermediation[/b].
+
+Bitcoin is a [b]digital currency[/b] that represents [b]the separation of money and state[/b].  Unlike other forms of currency, Bitcoin does not rely on any government or bank to function.  Instead, it relies on something everyone can agree upon: [b]mathematics[/b].  This enables it to be used globally, regardless of which borders you cross.
+
+You might not realize it, but when you buy something at a store, there are many intermediaries that take a cut of your payment before delivering it to the store's owner.  For example, if you've ever used a credit card, a company known as a [b]payment processor[/b] will charge a business anywhere from 2-5% of every transaction you make.  Companies like PayPal, Venmo, and Square have reduced their costs by using digital technologies, but still operate as centralized third-parties and are able to charge between 0.5-2% for the convenience they provide — but they still have to deal with the legacy banking system, which is slow and unreliable, resulting in increased costs for all.
+
+Even if you're using cash (also known as "bank notes"), the government charges [b]you[/b], by way of Income Tax, for the borrowing of that money.  It then pays its debtor, a private corporation known as [b]the Federal Reserve[/b].  If you'd like to see how deep [i]that[/i] rabbit hole goes, the [url=https://www.youtube.com/watch?v=iFDe5kUUyT0]arguably melodramatic "Who Owns The Federal Reserve?" is a great 30-minute introductory video[/url].
+
+Most of these costs and inefficiencies come from the historical need for [b]trust[/b] in a trade.  You trust that the money you are holding will be accepted by the merchant, and the merchant trusts that their bank can acquire the funds from your bank (or will accept their deposit of your cash).  Each step along the chain requires some degree of trust, which can be violated and often is.  This is known as [b]counterparty risk[/b].
+
+[center][video]Gc2en3nHxA4[/video][/center]
+
+Bitcoin solves the centralization problem by way of [b]economic incentive[/b].  Understanding these incentives involves understanding the mechanics of trust, a complex subject.  For our readers, we can break Bitcoin down into three primary components: bitcoin the money, Bitcoin the software, and Bitcoin the network.  Let's unpack the money first.
+
+[size=150][b]What is money?[/b][/size]
+
+Money is a shared delusion.  It exists as a medium for value exchange, a means for people to participate in fair trade.  As long the two traders agree on the value of their money, they can easily denominate their wares in that standard measure of value.  The money itself doesn't need anything more than a shared agreement as to [i]what[/i] it is, so governments often issue laws that require businesses to accept one currency or another so that trade is more easily facilitated.
+
+Consider the ages-old "traders on the bazaar" analogy: a farmer is in need of sheep for his farm, but only has milk cows.  How many sheep should he receive for one milk cow?  2 or 2.5?  How do you divide a sheep in half without losing value (it produces wool when kept alive!)?  Rather than going to market and attempting to haggle on the value of his milk cows as priced in sheep, he has the convenience of a smaller, divisible currency, [b]a standard-sized gold piece[/b].  Since both traders agree on the fungible nature of the gold piece (that is, it is identical to other gold pieces), they can agree on a fair trade (two sheep and some number of gold pieces).
+
+Currency exists as the "shared good" that we agree [i]represents[/i] money, but it is not money itself.  For example, a [b]fiat currency[/b] can become worthless when its issuer becomes untrustworthy, whilst the wealth—the money itself—simply migrates elsewhere.  A commodity-backed currency, on the other hand, at least has the underlying commodity (historically, usually gold) to fall back on for some intrinsic value.
+
+Fiat means "let it be done" in Latin.  A [b]fiat currency[/b] is one issued by a centralized institution (primarily banks & governments) and given value by way of law; that is, they say "this is to be considered money," and write laws that require participants to accept their particular currency as money.  By doing so, they create a [b][i]de jure[/i] currency[/b] by way of law enforcement, using the threat of violence (arrest, jail time) as a means for ensuring the value of their fiat currency.
+
+[b]Fact:[/b] the US Dollar transitioned from a commodity-backed currency to a fiat currency in 1971, when the government unilaterally canceled the direct convertibility of the United States dollar to gold, bringing [url=https://en.wikipedia.org/wiki/Bretton_Woods_system]the Bretton Woods system[/url] to an end.
+
+In the legacy world, merchants accept fiat currency in either physical form (as coins or bank notes) or virtual form (via a credit or debit card) in exchange for goods and services.  Behind the scenes, a series of relationships between the merchant and his bank and the customer and [i]their[/i] bank are utilized to "settle" the transaction from one party to the other — each party along the way taking a small "fee" for their services, generally proportional to the amount of trust they have for the counterparty.  Higher risk, higher fee.  Higher [i]complexity[/i], higher fee.
+
+[size=150][b]Bitcoin as money[/b][/size]
+
+In the Bitcoin world, merchants accept a mathematical proof — known simply as a [b]signature[/b] — as proof of authenticity for a particular transaction.  These signatures can be tested for validity against a shared ledger, which contains a record of all known transactions.  In Bitcoin, this shared ledger is known as [b]the blockchain[/b].
+
+[b]The blockchain[/b] is an append-only database.  Transactions are added to the blockchain in groups known as "blocks", with each block referring to the last, forming a "chain" of blocks going all the way back to the very first block (known as "[url=https://en.bitcoin.it/wiki/Genesis_block]the Genesis Block[/url]").  Creating a [i]valid[/i] block requires a significant amount of work, but in doing so the worker is minting new bitcoin for their release into the economy.  This is known as [b]the mining subsidy[/b], which refers to the incentive these "workers" have to "mine" new blocks.
+
+The security in Bitcoin is provided by [b]economic incentive[/b].  To control the rate of production, new blocks occur in Bitcoin once every ten minutes (on average).  Since anyone can produce a valid block, the "difficulty" of the work required to produce a valid block is calculated from the average time over a number of previous blocks, honing in on a target time of one new block every ten minutes.  Each valid block must be presented with a [b]proof of work[/b] that can be used to easily verify their efforts, and depends on the network "grinding" through possible solutions to a perfectly random problem.  This results in a shared worker pool, to which rewards are distributed proportional to effort contributed.
+
+These rules are written into the code that makes up [b]the Bitcoin software[/b], and every node that runs that software participates as a part of a larger network of peers that compose [b]the Bitcoin network[/b] itself.  In this way, all participants can come to an agreement as to the state of the ledger — that is, which blocks produce the longest valid chain — by verifying the work of any new block given to them and only passing it along if it is valid.  In this way, we can be reasonably confident that only valid blocks are appended to the ledger, which ensures that everyone maintains an identical copy of the blockchain itself (else they would be at risk of being defrauded).
+
+We call this shared state of our distributed ledger [b]consensus[/b].  Consensus is a shared vision between participating parties that allows them to construct new, unique things together, [b]like money[/b].  Bitcoin closes the loop between this shared vision and its application, which [b]causes the value of the currency to reflect the value of the network's participants[/b].  In other words, those who participate in the system are incentivized to not only defend it, but improve it.
+
+In this way the Bitcoin network itself can be relied upon as an "oracle" of sorts, being trusted to in sum to give an assertion as to what "chain" of historical events is likely to be the most accurate as determined by the consensus of the many witnessing parties (the "peers").  Using this model, systems can be designed to delegate trust from internal parties to an external, independently-verifiable trust anchor: in this case, the Bitcoin blockchain.
+
+[size=150][b]Bitcoin as a trust anchor[/b][/size]
+
+Since the Bitcoin blockchain can be relied upon as an oracle, we can use it to construct new systems.  These new systems can get incredibly interesting when combined with the Bitcoin protocol's [b]smart contract[/b] feature.  Bitcoin transactions have their own programming language, simply called "script", which is used to define the "rules" by which a transaction's proof is to be considered valid.  These rules can be as simple as "signature must match", or more complex, like "any two of these three signatures must be present".  Each bundle of script, and the rules it contains, are referred to as a [b]smart contract[/b].
+
+Smart contracts can be looked at like [b]self-enforcing laws[/b].  To participate in a contract, you must agree to its rules.  Others who wish to participate must also agree to the same rules, else they are not in agreement on all potential outcomes.  Instead of relying on legal constructions to protect the integrity of the contract's execution, the network itself simply agrees to process contracts in a very specific, deliberate fashion that is mutually agreed upon ahead of time.  With the Bitcoin blockchain, these rules are well-established and change infrequently, and as such the majority of the network can be expected to reliably come to consensus on the historical state of its transactions.
+
+Complex smart contracts can include behaviors such as "only valid after six months" and "if this, then that, else...", which allows us to build new protocols for certain applications.  One such application is a [b]payment network[/b], wherein participating parties agree to simply share a single transaction for a long-lived relationship, and simply update a single transaction over time rather than broadcasting a new transaction with each trade.  This allows parties to have a higher efficiency, at the cost of introducing trust to their relationship.
+
+In the near future, we will be able to participate in what's known as an [b]information market[/b].  By simply publishing on the web, we'll be able to define the terms of use for our own content, including receiving a payment for its use.  Using smart contracts like the ones mentioned, we can construct entire websites and applications around this idea, which will allow content creators and curators alike to thrive without intrusive advertising or surveillance.
+
+[size=150][b]New Money, New Problems[/b][/size]
+
+Bitcoin is a foundational component of the new global economy.  Bitcoin is a base money for a much larger financial ecosystem, including competitive currencies that use it as a commodity backing for their own (and even [i]competing[/i]) economic policies.  The work ahead of us is in building these experimental systems, testing them, and being good stewards of the greater vision of decentralization and disintermediation.
+
+Our own contributions will be in the form of [b]using Bitcoin as a trust anchor for information markets[/b], by extending the technology of the traditional web to that of the new, disintermediated economic arrangement that is Bitcoin.  We're calling the idea "[url=https://fabric.fm]Fabric[/url]", and we've been working on [url=https://maki.io]a toolbox called "Maki"[/url] to help developers build things for it.
